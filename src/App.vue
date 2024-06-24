@@ -77,6 +77,7 @@ const updateData = ({ key, value, text } = {}) => {
     items[indexPage.value][key]["text"] = text;
   } else items[indexPage.value][key] = value;
 };
+//
 </script>
 
 <style scoped>
