@@ -41,31 +41,31 @@ const items = [
     id: 2,
     title: "Romantic relationship",
     text: "Choose this option if you are looking for a serious relationship, romance, regular dates and true love",
-    icon: "#icon-hearts",
+    icon: "#icon-romantic",
   },
   {
     id: 3,
     title: "New friends",
     text: "Choose this option if you want to make new friends or just chat with someone",
-    icon: "#icon-messages",
+    icon: "#icon-communication",
   },
   {
     id: 4,
     title: "Starting a family",
     text: "Choose this option if you want to get married and start a family",
-    icon: "#icon-family-house-facade",
+    icon: "#icon-family",
   },
   {
     id: 5,
     title: "Adult Live Cams",
     text: "Choose this option if you want to watch adult entertainment of web models in real time",
-    icon: "#icon-g-cell-connection",
+    icon: "#icon-cam",
   },
   {
     id: 6,
     title: "Adult browser games",
     text: "Choose this option if you want to play browser-based online games for adults",
-    icon: "#icon-earth",
+    icon: "#icon-game",
   },
 ];
 
@@ -83,7 +83,7 @@ const onClick = () => {
   z-index: 999;
   left: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   color: #fff;
   opacity: 0;
   pointer-events: none;

@@ -50,11 +50,11 @@ const emit = defineEmits(["nextPage"]);
 
 const items = [
   { id: 1, icon: "#icon-strawberry", text: "one-night stand" },
-  { id: 2, icon: "#icon-hearts", text: "romantic relationship" },
-  { id: 3, icon: "#icon-messages", text: "new friends" },
-  { id: 3, icon: "#icon-family-house-facade", text: "starting a family" },
-  { id: 3, icon: "#icon-g-cell-connection", text: "adult Live Cams" },
-  { id: 3, icon: "#icon-earth", text: "adult online games" },
+  { id: 2, icon: "#icon-romantic", text: "romantic relationship" },
+  { id: 3, icon: "#icon-communication", text: "new friends" },
+  { id: 3, icon: "#icon-family", text: "starting a family" },
+  { id: 3, icon: "#icon-cam", text: "adult Live Cams" },
+  { id: 3, icon: "#icon-game", text: "adult online games" },
 ];
 
 const onClick = () => {

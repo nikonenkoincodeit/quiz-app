@@ -70,23 +70,23 @@ const img = computed(() => {
     (props.gender === "female" && sg === "male") ||
     (props.gender === "male" && sg === "female")
   ) {
-    image = "female-male.jpg";
+    image = "male-female.png";
   } else if (props.gender === "female" && sg === "female") {
-    image = "female-female.jpg";
+    image = "female-female.png";
   } else if (
     (props.gender === "female" && sg === "no matter") ||
     (props.gender === "non-binary" && sg === "female")
   ) {
-    image = "female-non-binary.jpg";
+    image = "male-nomatter.png";
   } else if (props.gender === "male" && sg === "male") {
-    image = "male-male.jpg";
+    image = "male-male.png";
   } else if (
     (props.gender === "male" && sg === "no matter") ||
     (props.gender === "non-binary" && sg === "male")
   ) {
-    image = "male-non-binary.jpg";
+    image = "nonbinary-male.png";
   } else {
-    image = "non-binary-non-binary.jpg";
+    image = "nonbinary-nomatter.png";
   }
   return new URL(`../assets/img/${image}`, import.meta.url);
 });
@@ -122,6 +122,6 @@ const updateData = () => {
 
 <style scoped>
 .body-content-top {
-  height: 280px;
+  height: 245px;
 }
 </style>

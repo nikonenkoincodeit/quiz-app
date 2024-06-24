@@ -45,7 +45,7 @@ const onClick = () => {
 <style scoped>
 header {
   position: relative;
-  padding-top: 60px;
+  padding-top: 45px;
 }
 .list {
   display: flex;
