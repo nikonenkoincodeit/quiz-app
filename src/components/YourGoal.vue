@@ -1,0 +1,74 @@
+<template>
+  <div class="box">
+    <div class="info">
+      <h1 class="title">Your Goal</h1>
+      <p class="desc">
+        <button type="button" class="btn btn-accent" @click="togglePopup">
+          Click here
+        </button>
+        to learn more about each option
+      </p>
+      <div class="gallery">
+        <Card
+          v-for="item of items"
+          :key="item.id"
+          :text="item.text"
+          :iconName="item.icon"
+          :selected="selectedGender"
+          @updateSelection="updateSelection"
+        />
+      </div>
+    </div>
+    <div class="body-content">
+      <button
+        type="button"
+        class="btn btn-continue"
+        :disabled="disabled"
+        @click="onClick"
+      >
+        CONTINUE
+      </button>
+    </div>
+  </div>
+  <Popup :isPopup="isPopup" @togglePopup="togglePopup" />
+</template>
+
+<script setup>
+import { ref, computed } from "vue";
+import Card from "../components/Card.vue";
+import Popup from "../components/Popup.vue";
+
+const selectedGender = ref("one-night stand");
+const disabled = ref(false);
+const isPopup = ref(false);
+
+const props = defineProps({
+  indexPage: { type: Number, default: 0 },
+});
+
+const emit = defineEmits(["nextPage"]);
+
+const items = [
+  { id: 1, icon: "#icon-strawberry", text: "one-night stand" },
+  { id: 2, icon: "#icon-hearts", text: "romantic relationship" },
+  { id: 3, icon: "#icon-messages", text: "new friends" },
+  { id: 3, icon: "#icon-family-house-facade", text: "starting a family" },
+  { id: 3, icon: "#icon-g-cell-connection", text: "adult Live Cams" },
+  { id: 3, icon: "#icon-earth", text: "adult online games" },
+];
+
+const onClick = () => {
+  emit("nextPage", props.indexPage + 1);
+};
+
+const updateSelection = (val) => {
+  selectedGender.value = val;
+};
+
+const togglePopup = () => {
+  isPopup.value = !isPopup.value;
+};
+</script>
+
+<style scoped>
+</style>
