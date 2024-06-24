@@ -76,8 +76,3 @@ const updateSelection = (val) => {
 };
 </script>
 
-<style scoped>
-.body-content-top {
-  height: 280px;
-}
-</style>

@@ -120,8 +120,3 @@ const updateData = () => {
 };
 </script>
 
-<style scoped>
-.body-content-top {
-  height: 245px;
-}
-</style>

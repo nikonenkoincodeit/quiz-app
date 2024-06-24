@@ -46,7 +46,7 @@ const props = defineProps({
   indexPage: { type: Number, default: 0 },
 });
 
-const emit = defineEmits(["nextPage"]);
+const emit = defineEmits(["nextPage", "updateData"]);
 
 const items = [
   { id: 1, icon: "#icon-strawberry", text: "one-night stand" },
@@ -56,6 +56,8 @@ const items = [
   { id: 3, icon: "#icon-cam", text: "adult Live Cams" },
   { id: 3, icon: "#icon-game", text: "adult online games" },
 ];
+
+emit("updateData", { value: true, key: "active" });
 
 const onClick = () => {
   emit("nextPage", props.indexPage + 1);
