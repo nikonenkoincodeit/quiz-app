@@ -96,18 +96,14 @@ const onClick = () => {
 }
 
 .container {
-  height: 100%;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .list-item-title {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 17px;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   font-weight: 500;
 }
 .list-item-text {
@@ -117,6 +113,7 @@ const onClick = () => {
   margin-top: 10px;
 }
 .btn-continue {
+  margin-top: 30px;
   margin-bottom: 0;
 }
 </style>
