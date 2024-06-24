@@ -119,4 +119,9 @@ const updateData = () => {
   emit("nextPage", props.indexPage + 1);
 };
 </script>
+<style scoped>
+.body-content-top {
+  height: 235px;
+}
+</style>
 

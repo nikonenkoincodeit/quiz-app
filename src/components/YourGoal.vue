@@ -14,7 +14,7 @@
           :key="item.id"
           :text="item.text"
           :iconName="item.icon"
-          :selected="selectedGender"
+          :selected="selected"
           @updateSelection="updateSelection"
         />
       </div>
@@ -38,7 +38,7 @@ import { ref, computed } from "vue";
 import Card from "../components/Card.vue";
 import Popup from "../components/Popup.vue";
 
-const selectedGender = ref("one-night stand");
+const selected = ref("one-night stand");
 const disabled = ref(false);
 const isPopup = ref(false);
 
@@ -59,12 +59,18 @@ const items = [
 
 emit("updateData", { value: true, key: "active" });
 
+const el = computed(() => items.find((item) => item.text === selected.value));
+
 const onClick = () => {
-  emit("nextPage", props.indexPage + 1);
+  emit("updateData", {
+    value: el.value.icon,
+    key: "icon",
+    text: el.value.text,
+  });
 };
 
 const updateSelection = (val) => {
-  selectedGender.value = val;
+  selected.value = val;
 };
 
 const togglePopup = () => {
