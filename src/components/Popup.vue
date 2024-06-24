@@ -4,7 +4,7 @@
       <ul class="list">
         <li class="list-item" v-for="item of items" :key="item.id">
           <h2 class="list-item-title">
-            <svg width="30" height="30" fill="#ff443a">
+            <svg width="25" height="25" fill="#ff443a">
               <use :href="icon + item.icon"></use>
             </svg>
             {{ item.title }}
@@ -96,20 +96,27 @@ const onClick = () => {
 }
 
 .container {
+  height: 100%;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .list-item-title {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 18px;
-  margin-bottom: 7px;
+  font-size: 17px;
+  margin-bottom: 5px;
   font-weight: 500;
 }
 .list-item-text {
   font-size: 15px;
 }
 .list-item + .list-item {
-  margin-top: 15px;
+  margin-top: 10px;
+}
+.btn-continue {
+  margin-bottom: 0;
 }
 </style>
