@@ -2,7 +2,10 @@
   <div class="box">
     <div class="info">
       <h1 class="title">Your Gender</h1>
-      <p class="desc">Choose the option that best describes your gender</p>
+      <p class="desc">
+        <button type="button" class="btn btn-accent">Сhoose</button>
+        the option that best describes your gender
+      </p>
       <div class="gallery">
         <Card
           v-for="item of items"

@@ -65,30 +65,26 @@ const img = computed(() => {
   let image = "";
   const sg = selectedGender.value;
 
-  console.log(props.gender, sg);
-
-  if (
-    (props.gender === "female" && sg === "male") ||
-    (props.gender === "male" && sg === "female")
-  ) {
-    image = "male-female.png";
+  if (props.gender === "female" && sg === "male") {
+    image = "female-male.png";
   } else if (props.gender === "female" && sg === "female") {
     image = "female-female.png";
-  } else if (
-    (props.gender === "female" && sg === "no matter") ||
-    (props.gender === "non-binary" && sg === "female")
-  ) {
+  } else if (props.gender === "female" && sg === "no matter") {
     image = "female-nomatter.png";
+  } else if (props.gender === "male" && sg === "female") {
+    image = "male-female.png";
   } else if (props.gender === "male" && sg === "male") {
     image = "male-male.png";
-  } else if (
-    (props.gender === "male" && sg === "no matter") ||
-    (props.gender === "non-binary" && sg === "male")
-  ) {
+  } else if (props.gender === "male" && sg === "no matter") {
+    image = "male-nomatter.png";
+  } else if (props.gender === "non-binary" && sg === "male") {
     image = "nonbinary-male.png";
+  } else if (props.gender === "non-binary" && sg === "female") {
+    image = "nonbinary-female.png";
   } else {
     image = "nonbinary-nomatter.png";
   }
+
   return new URL(`../assets/img/${image}`, import.meta.url);
 });
 
