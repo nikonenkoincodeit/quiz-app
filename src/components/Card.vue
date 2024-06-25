@@ -5,7 +5,7 @@
     @click="onClick"
   >
     <div class="card-icon">
-      <svg width="40" height="40" v-if="iconName">
+      <svg width="50" height="50" v-if="iconName">
         <use :href="icon + iconName"></use>
       </svg>
     </div>
@@ -37,6 +37,11 @@ const onClick = () => {
   border-radius: 6px;
   padding: 10px;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
 }
 
 .card-icon svg {

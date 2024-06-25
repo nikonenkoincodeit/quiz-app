@@ -13,7 +13,7 @@
     <div class="body-content">
       <div class="w-img">
         <img
-          src="../assets/img/hand_final_opacity.gif"
+          src="../assets/img/hand-scale.gif"
           class="hand_final"
           alt="hand_final"
           v-if="disabled"
@@ -117,6 +117,8 @@ onMounted(() => {
 .w-img {
   position: relative;
   overflow: hidden;
+  width: 300px;
+  margin: 0 auto;
 }
 .select-age {
   height: 174px;
@@ -130,10 +132,11 @@ onMounted(() => {
   position: absolute;
   pointer-events: none;
   z-index: -1;
-  top: -210px;
-  right: -30px;
-  width: 700px;
-  height: 700px;
+  top: 55%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 150px;
+  height: 150px;
 }
 
 .list-item {
