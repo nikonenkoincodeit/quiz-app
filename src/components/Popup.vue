@@ -70,7 +70,6 @@ const items = [
 ];
 
 const onClick = () => {
-  console.log("togglePopup");
   emit("togglePopup");
 };
 </script>

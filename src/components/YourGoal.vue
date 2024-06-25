@@ -20,14 +20,7 @@
       </div>
     </div>
     <div class="body-content">
-      <button
-        type="button"
-        class="btn btn-continue"
-        :disabled="disabled"
-        @click="onClick"
-      >
-        CONTINUE
-      </button>
+      <NextPageBtn @click="onClick" />
     </div>
   </div>
   <Popup :isPopup="isPopup" @togglePopup="togglePopup" />
@@ -37,6 +30,7 @@
 import { ref, computed } from "vue";
 import Card from "../components/Card.vue";
 import Popup from "../components/Popup.vue";
+import NextPageBtn from "../components/NextPageBtn.vue";
 
 const selected = ref("one-night stand");
 const disabled = ref(false);
@@ -44,6 +38,9 @@ const isPopup = ref(false);
 
 const props = defineProps({
   indexPage: { type: Number, default: 0 },
+  disabled: { type: Boolean },
+  selected: { type: String },
+  gender: { type: String },
 });
 
 const emit = defineEmits(["nextPage", "updateData"]);

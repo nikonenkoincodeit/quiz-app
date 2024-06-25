@@ -28,7 +28,7 @@
         />
       </div>
 
-      <NextPageBtn :disabled="false" @click="updateData" />
+      <NextPageBtn @click="updateData" />
     </div>
   </div>
 </template>
@@ -47,7 +47,6 @@ const props = defineProps({
   gender: { type: String },
 });
 
-console.log("props.gender ", props.gender);
 
 const emit = defineEmits(["nextPage", "updateData"]);
 

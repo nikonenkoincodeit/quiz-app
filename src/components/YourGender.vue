@@ -25,7 +25,7 @@
         />
       </div>
 
-      <NextPageBtn :disabled="false" @click="updateData" />
+      <NextPageBtn @click="updateData" />
     </div>
   </div>
 </template>

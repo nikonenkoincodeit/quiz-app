@@ -26,7 +26,7 @@ const items = reactive([
   {
     id: 1,
     value: "",
-    text: "age",
+    text: "Age",
     icon: { name: "", text: "" },
     active: true,
     disabled: true,
@@ -67,7 +67,6 @@ const myComponent = computed(() => {
 });
 
 const nextPage = (val) => {
-  console.log("val ", val);
   indexPage.value = val;
 };
 
@@ -77,7 +76,6 @@ const updateData = ({ key, value, text } = {}) => {
     items[indexPage.value][key]["text"] = text;
   } else items[indexPage.value][key] = value;
 };
-//
 </script>
 
 <style scoped>

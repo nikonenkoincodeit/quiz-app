@@ -14,8 +14,8 @@
     <ul class="list">
       <li class="list-item" v-for="item of items" :key="item.id">
         <div class="circle" :class="[item.active ? 'active' : '']">
-          <span v-if="item.value">{{ item.value }}</span>
-          <svg width="30" height="30" v-if="item?.icon?.name">
+          <span v-if="item.value" class="pulse">{{ item.value }}</span>
+          <svg width="30" height="30" v-if="item?.icon?.name" class="pulse">
             <use :href="icon + item?.icon?.name"></use>
           </svg>
         </div>
@@ -26,6 +26,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import icon from "../assets/icons/sprite.svg";
 
 const props = defineProps({
@@ -37,6 +38,8 @@ const props = defineProps({
 });
 
 const emit = defineEmits(["nextPage"]);
+
+const isPulsing = ref(false);
 
 const onClick = () => {
   emit("nextPage", props.indexPage - 1);
@@ -118,5 +121,11 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.pulse {
+  animation: pulse 1s;
+  animation-delay: 0.1s;
+  animation-iteration-count: 1;
 }
 </style>

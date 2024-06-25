@@ -12,7 +12,7 @@
 
 <script setup>
 defineProps({
-  disabled: { type: Boolean, default: true },
+  disabled: { type: Boolean, default: false },
 });
 
 const emit = defineEmits(["onClick"]);
