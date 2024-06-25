@@ -129,7 +129,7 @@ onMounted(() => {
 .hand_final {
   position: absolute;
   pointer-events: none;
-  z-index: 10;
+  z-index: -1;
   top: -210px;
   right: -30px;
   width: 700px;

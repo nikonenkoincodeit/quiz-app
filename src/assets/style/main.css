@@ -74,6 +74,7 @@ body {
 }
 
 .btn-accent {
+  color: var(--main-color);
   padding: 7px 10px;
   font-size: 18px;
   background-image: url("../img/bg.png");

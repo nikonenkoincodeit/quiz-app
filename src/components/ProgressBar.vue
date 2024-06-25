@@ -112,6 +112,7 @@ header {
 }
 
 .btn-prev {
+  color: var(--main-color);
   padding: 10px 10px 10px 0;
   position: absolute;
   left: 0;

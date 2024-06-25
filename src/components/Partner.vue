@@ -47,7 +47,6 @@ const props = defineProps({
   gender: { type: String },
 });
 
-
 const emit = defineEmits(["nextPage", "updateData"]);
 
 emit("updateData", { value: true, key: "active" });
@@ -65,6 +64,9 @@ const items = [
 const img = computed(() => {
   let image = "";
   const sg = selectedGender.value;
+
+  console.log(props.gender, sg);
+
   if (
     (props.gender === "female" && sg === "male") ||
     (props.gender === "male" && sg === "female")
@@ -76,7 +78,7 @@ const img = computed(() => {
     (props.gender === "female" && sg === "no matter") ||
     (props.gender === "non-binary" && sg === "female")
   ) {
-    image = "male-nomatter.png";
+    image = "female-nomatter.png";
   } else if (props.gender === "male" && sg === "male") {
     image = "male-male.png";
   } else if (
