@@ -85,11 +85,9 @@ body {
 }
 
 .gallery {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
-  display: flex;
+  display: grid;
   justify-content: space-between;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(3, minmax(80px, 90px));
   gap: 20px;
 }
 

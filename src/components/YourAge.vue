@@ -133,6 +133,7 @@ onMounted(() => {
   pointer-events: none;
   z-index: -1;
   top: 55%;
+  opacity: 0.6;
   transform: translateY(-50%);
   right: 20px;
   width: 150px;
