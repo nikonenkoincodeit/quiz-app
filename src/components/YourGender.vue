@@ -10,7 +10,7 @@
           type=&quot;button&quot;
           class=&quot;btn btn-accent&quot;
         >
-          Сhoose</button
+        ${$t('your_gender.btn')}</button
         >`,
           })
         "

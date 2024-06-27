@@ -26,19 +26,23 @@
       "title": "Your Age",
       "desctiption1":"We use this to find better and more personal offers to you",
       "desctiption2":"{btn} up or down to select the age",
-      "link": "I am already 18 but I don't want to show my age now"
+      "link": "I am already 18 but I don't want to show my age now",
+      "btn": "Just scroll"
     },
     "your_gender":{
       "title": "Your Gender",
-      "desctiption1":"{btn} the option that best describes your gender"
+      "desctiption1":"{btn} the option that best describes your gender",
+      "btn": "Сhoose"
     },
     "partner": {
       "title": "Partner",
-      "desctiption1":"{btn} the gender of the partner you prefer"
+      "desctiption1":"{btn} the gender of the partner you prefer",
+      "btn": "Сhoose"
     },
     "your_goal": {
       "title": "Your Goal",
-      "desctiption1":"{btn} to learn more about each option"
+      "desctiption1":"{btn} to learn more about each option",
+      "btn":"Click here"
     },
     "popup": {
       "element1": {

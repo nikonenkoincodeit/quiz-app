@@ -8,7 +8,7 @@
         v-html="
           $t('your_goal.desctiption1', {
             btn: `<button type='button' class='btn btn-accent'>
-          Click here
+              ${$t('your_goal.btn')}
         </button>`,
           })
         "

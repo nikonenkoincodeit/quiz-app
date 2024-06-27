@@ -10,7 +10,9 @@
         v-html="
           $t('your_age.desctiption2', {
             btn: `<button
-          type=&quot;button&quot;class=&quot;btn btn-accent&quot;>Just scroll</button>`,
+          type=&quot;button&quot;class=&quot;btn btn-accent&quot;>${$t(
+            'your_age.btn'
+          )}</button>`,
           })
         "
       ></p>
