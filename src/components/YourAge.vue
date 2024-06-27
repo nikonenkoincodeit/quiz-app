@@ -92,6 +92,7 @@ const isActive = (age) => {
 
 const updateData = (age) => {
   emit("updateData", { value: age, key: "value" });
+  emit("updateData", { value: age, key: "selected" });
   emit("nextPage", props.indexPage + 1);
 };
 

@@ -31,6 +31,8 @@ const items = reactive([
   {
     id: 1,
     value: "",
+    name: "your age",
+    selected: "",
     text: "progress_bar.age",
     icon: { name: "", text: "" },
     active: true,
@@ -39,6 +41,8 @@ const items = reactive([
   {
     id: 2,
     value: "",
+    name: "your gender",
+    selected: "",
     text: "progress_bar.gender",
     icon: { name: "", text: "" },
     active: false,
@@ -47,6 +51,8 @@ const items = reactive([
   {
     id: 3,
     value: "",
+    name: "partner",
+    selected: "",
     text: "progress_bar.partner",
     icon: { name: "", text: "" },
     active: false,
@@ -55,6 +61,8 @@ const items = reactive([
   {
     id: 4,
     value: "",
+    name: "your goal",
+    selected: "",
     text: "progress_bar.goal",
     icon: { name: "", text: "" },
     active: false,
@@ -62,7 +70,7 @@ const items = reactive([
   },
 ]);
 
-const indexPage = ref(3);
+const indexPage = ref(0);
 
 const myComponent = computed(() => {
   if (indexPage.value === 0) return YourAge;
@@ -76,11 +84,12 @@ const nextPage = (val) => {
 };
 
 const updateData = ({ key, value, text } = {}) => {
-  // console.log("123 ", { key, value, text });
   if (key === "icon") {
     items[indexPage.value][key]["name"] = value;
     items[indexPage.value][key]["text"] = text;
   } else items[indexPage.value][key] = value;
+
+  console.log("items ", items);
 };
 </script>
 

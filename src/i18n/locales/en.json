@@ -19,8 +19,8 @@
       "romantic":"Romantic relationship",
       "new_friends":"New friends",
       "starting_a_family":"Starting a family",
-      "adult_live_cams":"Adult Live Cams",
-      "adult_online_games":"Adult online games"
+      "adult_live_cams":"Live Cams",
+      "adult_online_games":"Online games"
     },
     "your_age": {
       "title": "Your Age",
@@ -58,11 +58,11 @@
         "text": "Choose this option if you want to get married and start a family"
       },
       "element5": {
-        "title":"Adult Live Cams",
+        "title":"Live Cams",
         "text": "Choose this option if you want to watch adult entertainment of web models in real time"
       },
       "element6": {
-        "title":"Adult browser games",
+        "title":"Online games",
         "text": "Choose this option if you want to play browser-based online games for adults"
       }
     }

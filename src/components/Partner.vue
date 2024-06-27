@@ -122,8 +122,9 @@ const updateData = () => {
   emit("updateData", {
     value: el.value.icon,
     key: "icon",
-    text: el.value.text,
+    text: el.value.value,
   });
+  emit("updateData", { value: el.value.value, key: "selected" });
   emit("nextPage", props.indexPage + 1);
 };
 </script>

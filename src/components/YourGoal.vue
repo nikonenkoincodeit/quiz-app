@@ -92,14 +92,15 @@ const items = [
 
 emit("updateData", { value: true, key: "active" });
 
-const el = computed(() => items.find((item) => item.text === selected.value));
+const el = computed(() => items.find((item) => item.value === selected.value));
 
 const onClick = () => {
   emit("updateData", {
     value: el.value.icon,
     key: "icon",
-    text: el.value.text,
+    text: el.value.value,
   });
+  emit("updateData", { value: el.value.value, key: "selected" });
 };
 
 const updateSelection = (val) => {
