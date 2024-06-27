@@ -1,0 +1,73 @@
+{
+    "progress_bar": {
+      "age":"",
+      "gender": "",
+      "partner":"",
+      "goal":""
+    },
+    "buttons": {
+      "continue": "",
+      "got_it": "",
+      "go_back": ""
+    },
+    "list":{
+      "male":"",
+      "female":"",
+      "non_binary": "",
+      "no_matter": "",
+      "one_night_stand":"",
+      "romantic":"",
+      "new_friends":"",
+      "starting_a_family":"y",
+      "adult_live_cams":"",
+      "adult_online_games":""
+    },
+    "your_age": {
+      "title": "",
+      "desctiption1":"",
+      "desctiption2":"{btn} ",
+      "link": "",
+      "btn":""
+    },
+    "your_gender":{
+      "title": "",
+      "desctiption1":"{btn} ",
+      "btn":""
+    },
+    "partner": {
+      "title": "",
+      "desctiption1":"{btn} ",
+      "btn":""
+    },
+    "your_goal": {
+      "title": "",
+      "desctiption1":"{btn} ",
+      "btn":""
+    },
+    "popup": {
+      "element1": {
+        "title":"",
+        "text": ""
+      },
+      "element2": {
+        "title":"",
+        "text": ""
+      },
+      "element3": {
+        "title":"",
+        "text": ""
+      },
+      "element4": {
+        "title":"",
+        "text": ""
+      },
+      "element5": {
+        "title":"",
+        "text": ""
+      },
+      "element6": {
+        "title":"",
+        "text": ""
+      }
+    }
+  }
