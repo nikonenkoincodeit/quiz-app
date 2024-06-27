@@ -1,73 +1,73 @@
 {
     "progress_bar": {
-      "age":"",
-      "gender": "",
-      "partner":"",
-      "goal":""
+      "age":"Età",
+      "gender": "Genere",
+      "partner":" Partner",
+      "goal":"Obiettivo"
     },
     "buttons": {
-      "continue": "",
-      "got_it": "",
-      "go_back": ""
+      "continue": "Continua",
+      "got_it": "Capito",
+      "go_back": "Indietro"
     },
     "list":{
-      "male":"",
-      "female":"",
-      "non_binary": "",
-      "no_matter": "",
-      "one_night_stand":"",
-      "romantic":"",
-      "new_friends":"",
-      "starting_a_family":"y",
-      "adult_live_cams":"",
-      "adult_online_games":""
+      "male":"Uomo",
+      "female":"Donna",
+      "non_binary": "Non-binario",
+      "no_matter": "Non importa",
+      "one_night_stand":"Una notte di festa",
+      "romantic":"Romantico",
+      "new_friends":"Nuovi amici",
+      "starting_a_family":"Famiglia",
+      "adult_live_cams":"Camme in diretta",
+      "adult_online_games":"Giochi online"
     },
     "your_age": {
-      "title": "",
-      "desctiption1":"",
-      "desctiption2":"{btn} ",
-      "link": "",
-      "btn":""
+      "title": "La Tua Età",
+      "desctiption1":"Utilizziamo questo dato per trovare offerte migliori e più personalizzate per voi.",
+      "desctiption2":"{btn} verso l'alto o verso il basso per selezionare l'età.",
+      "link": "Ho già 18 anni ma non voglio mostrare la mia età adesso.",
+      "btn":"Basta scorrere"
     },
     "your_gender":{
-      "title": "",
-      "desctiption1":"{btn} ",
-      "btn":""
+      "title": "Vostro Genere",
+      "desctiption1":"{btn} l'opzione che meglio descrive il proprio sesso.",
+      "btn":"Scegliere"
     },
     "partner": {
-      "title": "",
-      "desctiption1":"{btn} ",
-      "btn":""
+      "title": "Partner",
+      "desctiption1":"{btn} il sesso del partner che si preferisce.",
+      "btn":"Scegliere"
     },
     "your_goal": {
-      "title": "",
-      "desctiption1":"{btn} ",
-      "btn":""
+      "title": "Il Vostro Obiettivo",
+      "desctiption1":"{btn} per saperne di più su ciascuna opzione.",
+      "btn":"Fare clic qui"
     },
     "popup": {
       "element1": {
-        "title":"",
-        "text": ""
+        "title":"Una notte di festa",
+        "text": "Scegliete questa opzione se cercate un incontro veloce, una relazione senza impegno, in altre parole, un'avventura di una notte."
       },
       "element2": {
-        "title":"",
-        "text": ""
+        "title":"Romantico",
+        "text": "Scegliete questa opzione se siete alla ricerca di una relazione seria, di romanticismo, di appuntamenti regolari e di vero amore."
       },
       "element3": {
-        "title":"",
-        "text": ""
+        "title":"Nuovi amici",
+        "text": "Scegliete questa opzione se volete fare nuove amicizie o semplicemente chiacchierare con qualcuno."
       },
       "element4": {
-        "title":"",
-        "text": ""
+        "title":"Famiglia",
+        "text": "Scegliete questa opzione se volete sposarvi e formare una famiglia."
       },
       "element5": {
-        "title":"",
-        "text": ""
+        "title":"Camme in diretta",
+        "text": "Scegliere questa opzione se si desidera guardare l'intrattenimento per adulti delle modelle del web in tempo reale."
       },
       "element6": {
-        "title":"",
-        "text": ""
+        "title":"Giochi online",
+        "text": "Scegliete questa opzione se volete giocare a giochi online per adulti basati su browser."
       }
     }
   }
