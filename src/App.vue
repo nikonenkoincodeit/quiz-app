@@ -24,7 +24,7 @@ import YourGoal from "./components/YourGoal.vue";
 
 onMounted(() => {
   const { $i18n } = getCurrentInstance().proxy;
-  $i18n.locale = "es";
+  $i18n.locale = "pl";
 });
 
 const items = reactive([
