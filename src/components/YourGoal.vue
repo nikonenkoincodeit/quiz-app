@@ -38,16 +38,15 @@ import Card from "../components/Card.vue";
 import Popup from "../components/Popup.vue";
 import NextPageBtn from "../components/NextPageBtn.vue";
 
-const selected = ref("one-night stand");
-const disabled = ref(false);
-const isPopup = ref(false);
-
 const props = defineProps({
   indexPage: { type: Number, default: 0 },
   disabled: { type: Boolean },
   selected: { type: String },
   gender: { type: String },
 });
+
+const selected = ref(props.selected || "one-night stand");
+const isPopup = ref(false);
 
 const emit = defineEmits(["nextPage", "updateData"]);
 

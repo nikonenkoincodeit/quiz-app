@@ -25,6 +25,7 @@
         />
         <div
           class="select-age body-content-top"
+          ref="selectAgeRef"
           @scroll="onScroll"
           @keyup="onKeyup"
         >
@@ -33,6 +34,7 @@
               v-for="age in ages"
               :key="age"
               :class="{ active: isActive(age) }"
+              :data-id="age"
               class="list-item"
             >
               {{ age }}
@@ -56,14 +58,15 @@ import NextPageBtn from "../components/NextPageBtn.vue";
 
 const ages = Array.from({ length: 71 }, (v, k) => k + 16);
 
-const selectedAge = ref(null);
-
-const selectAgeContainer = ref(null);
+const selectAgeRef = ref(null);
 
 const props = defineProps({
   indexPage: { type: Number, default: 0 },
   disabled: { type: Boolean, default: true },
+  selected: { type: [String, Number], default: "" },
 });
+
+const selectedAge = ref(props.selected);
 
 const emit = defineEmits(["nextPage", "updateData"]);
 
@@ -113,8 +116,29 @@ const onKeyup = (e) => {
 };
 
 onMounted(() => {
+  const item = selectAgeRef.value?.querySelector(
+    `[data-id="${selectedAge.value}"]`
+  );
+
+  if (item) {
+    const parent = selectAgeRef.value;
+    const parentRect = parent.getBoundingClientRect();
+    const itemRect = item.getBoundingClientRect();
+
+    const scrollPosition =
+      itemRect.top +
+      parent.scrollTop -
+      parentRect.top -
+      parent.clientHeight / 2 +
+      itemRect.height / 2;
+
+    parent.scrollTo({
+      top: scrollPosition,
+      behavior: "auto",
+    });
+  }
   nextTick(() => {
-    handleScroll({ target: document.querySelector(".select-age") });
+    handleScroll({ target: selectAgeRef.value });
   });
 });
 </script>

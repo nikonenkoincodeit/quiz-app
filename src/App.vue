@@ -6,8 +6,8 @@
         :is="myComponent"
         :indexPage="indexPage"
         :disabled="items[indexPage]?.disabled"
-        :selected="items[indexPage]?.icon?.text"
-        :gender="items[1]?.icon?.text"
+        :selected="items[indexPage]?.selected"
+        :gender="items[1]?.selected"
         @nextPage="nextPage"
         @updateData="updateData"
       />

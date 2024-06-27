@@ -48,14 +48,15 @@ import { ref, computed } from "vue";
 import NextPageBtn from "../components/NextPageBtn.vue";
 import Card from "../components/Card.vue";
 
-const selectedGender = ref("");
-const isPulsing = ref(false);
-const disabled = ref(false);
-
 const props = defineProps({
   indexPage: { type: Number, default: 0 },
   gender: { type: String, default: "male" },
+  selected: { type: String },
 });
+
+const selectedGender = ref(props.selected);
+const isPulsing = ref(false);
+const disabled = ref(false);
 
 const emit = defineEmits(["nextPage", "updateData"]);
 
@@ -98,11 +99,13 @@ const img = computed(() => {
 
   return new URL(`../assets/img/${image}`, import.meta.url);
 });
-console.log(props.gender);
-if (props.gender === "female" || props.gender === "non-binary") {
-  selectedGender.value = "male";
-} else if (props.gender === "male") {
-  selectedGender.value = "female";
+
+if (!selectedGender.value) {
+  if (props.gender === "female" || props.gender === "non-binary") {
+    selectedGender.value = "male";
+  } else if (props.gender === "male") {
+    selectedGender.value = "female";
+  }
 }
 
 const onClick = () => {
