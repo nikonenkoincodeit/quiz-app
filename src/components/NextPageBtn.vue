@@ -6,7 +6,7 @@
     :class="{ 'btn-active': !disabled }"
     @click="onClick"
   >
-    CONTINUE
+    {{ $t("buttons.continue") }}
   </button>
 </template>
 

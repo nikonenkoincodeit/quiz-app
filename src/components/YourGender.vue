@@ -1,16 +1,26 @@
 <template>
   <div class="box">
     <div class="info">
-      <h1 class="title">Your Gender</h1>
-      <p class="desc">
-        <button type="button" class="btn btn-accent">Сhoose</button>
-        the option that best describes your gender
-      </p>
+      <h1 class="title">{{ $t("your_gender.title") }}</h1>
+      <p
+        class="desc"
+        v-html="
+          $t('your_gender.desctiption1', {
+            btn: `<button
+          type=&quot;button&quot;
+          class=&quot;btn btn-accent&quot;
+        >
+          Сhoose</button
+        >`,
+          })
+        "
+      ></p>
       <div class="gallery">
         <Card
           v-for="item of items"
           :key="item.id"
-          :text="item.text"
+          :text="$t(item.text)"
+          :value="item.value"
           :iconName="item.icon"
           :selected="selectedGender"
           @updateSelection="updateSelection"
@@ -51,9 +61,14 @@ const isPulsing = ref(false);
 emit("updateData", { value: true, key: "active" });
 
 const items = [
-  { id: 1, icon: "#icon-male", text: "male" },
-  { id: 2, icon: "#icon-female", text: "female" },
-  { id: 3, icon: "#icon-mercury-solid", text: "non-binary" },
+  { id: 1, icon: "#icon-male", text: "list.male", value: "male" },
+  { id: 2, icon: "#icon-female", text: "list.female", value: "female" },
+  {
+    id: 3,
+    icon: "#icon-mercury-solid",
+    text: "list.non_binary",
+    value: "non-binary",
+  },
 ];
 
 const img = computed(
@@ -61,7 +76,7 @@ const img = computed(
 );
 
 const el = computed(() =>
-  items.find((item) => item.text === selectedGender.value)
+  items.find((item) => item.value === selectedGender.value)
 );
 
 const updateData = () => {

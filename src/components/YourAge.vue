@@ -1,15 +1,19 @@
 <template>
   <div class="box">
     <div class="info">
-      <p>{{ $t("hello") }}</p>
-      <h1 class="title">Your Age</h1>
+      <h1 class="title">{{ $t("your_age.title") }}</h1>
       <p class="desc">
-        We use this to find better and more personal offers to you
+        {{ $t("your_age.desctiption1") }}
       </p>
-      <p class="desc">
-        <button type="button" class="btn btn-accent">Just scroll</button>
-        up or down to select the age
-      </p>
+      <p
+        class="desc"
+        v-html="
+          $t('your_age.desctiption2', {
+            btn: `<button
+          type=&quot;button&quot;class=&quot;btn btn-accent&quot;>Just scroll</button>`,
+          })
+        "
+      ></p>
     </div>
     <div class="body-content">
       <div class="w-img">
@@ -39,7 +43,7 @@
       <div>
         <NextPageBtn :disabled="disabled" @click="updateData(selectedAge)" />
         <p class="text" @click="onClick">
-          I am already 18 but I don't want to show my age now
+          {{ $t("your_age.link") }}
         </p>
       </div>
     </div>

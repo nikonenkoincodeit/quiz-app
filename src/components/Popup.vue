@@ -7,15 +7,15 @@
             <svg width="25" height="25" fill="#ff443a">
               <use :href="icon + item.icon"></use>
             </svg>
-            {{ item.title }}
+            {{ $t(item.title) }}
           </h2>
           <p class="list-item-text">
-            {{ item.text }}
+            {{ $t(item.text) }}
           </p>
         </li>
       </ul>
       <button type="button" class="btn btn-continue" @click="onClick">
-        GOT IT
+        {{ $t("buttons.got_it") }}
       </button>
     </div>
   </div>
@@ -33,44 +33,44 @@ const emit = defineEmits(["togglePopup"]);
 const items = [
   {
     id: 1,
-    title: "One-night stand",
-    text: "Choose this option if you are looking for quick dating, a relationship without commitment, in other words, a one-night stand",
+    title: "popup.element1.title",
+    text: "popup.element1.text",
     icon: "#icon-strawberry",
   },
   {
     id: 2,
-    title: "Romantic relationship",
-    text: "Choose this option if you are looking for a serious relationship, romance, regular dates and true love",
+    title: "popup.element2.title",
+    text: "popup.element2.text",
     icon: "#icon-romantic",
   },
   {
     id: 3,
-    title: "New friends",
-    text: "Choose this option if you want to make new friends or just chat with someone",
+    title: "popup.element3.title",
+    text: "popup.element3.text",
     icon: "#icon-communication",
   },
   {
     id: 4,
-    title: "Starting a family",
-    text: "Choose this option if you want to get married and start a family",
+    title: "popup.element4.title",
+    text: "popup.element4.text",
     icon: "#icon-family",
   },
   {
     id: 5,
-    title: "Adult Live Cams",
-    text: "Choose this option if you want to watch adult entertainment of web models in real time",
+    title: "popup.element5.title",
+    text: "popup.element5.text",
     icon: "#icon-cam",
   },
   {
     id: 6,
-    title: "Adult browser games",
-    text: "Choose this option if you want to play browser-based online games for adults",
+    title: "popup.element6.title",
+    text: "popup.element6.text",
     icon: "#icon-game",
   },
 ];
 
-const onClick = () => {
-  emit("togglePopup");
+const onClick = (e) => {
+  emit("togglePopup", e);
 };
 </script>
 

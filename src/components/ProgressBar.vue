@@ -9,7 +9,7 @@
       <svg width="20" height="20">
         <use :href="icon + '#icon-arrow-left'"></use>
       </svg>
-      Go Back
+      {{ $t("buttons.go_back") }}
     </button>
     <ul class="list">
       <li class="list-item" v-for="item of items" :key="item.id">
@@ -19,7 +19,7 @@
             <use :href="icon + item?.icon?.name"></use>
           </svg>
         </div>
-        <p class="text">{{ item.text }}</p>
+        <p class="text">{{ $t(item.text) }}</p>
       </li>
     </ul>
   </header>

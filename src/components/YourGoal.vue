@@ -1,18 +1,24 @@
 <template>
   <div class="box">
     <div class="info">
-      <h1 class="title">Your Goal</h1>
-      <p class="desc">
-        <button type="button" class="btn btn-accent" @click="togglePopup">
+      <h1 class="title">{{ $t("your_goal.title") }}</h1>
+      <p
+        class="desc"
+        @click="togglePopup"
+        v-html="
+          $t('your_goal.desctiption1', {
+            btn: `<button type='button' class='btn btn-accent'>
           Click here
-        </button>
-        to learn more about each option
-      </p>
+        </button>`,
+          })
+        "
+      ></p>
       <div class="gallery">
         <Card
           v-for="item of items"
           :key="item.id"
-          :text="item.text"
+          :text="$t(item.text)"
+          :value="item.value"
           :iconName="item.icon"
           :selected="selected"
           @updateSelection="updateSelection"
@@ -46,12 +52,42 @@ const props = defineProps({
 const emit = defineEmits(["nextPage", "updateData"]);
 
 const items = [
-  { id: 1, icon: "#icon-strawberry", text: "one-night stand" },
-  { id: 2, icon: "#icon-romantic", text: "romantic relationship" },
-  { id: 3, icon: "#icon-communication", text: "new friends" },
-  { id: 3, icon: "#icon-family", text: "starting a family" },
-  { id: 3, icon: "#icon-cam", text: "adult Live Cams" },
-  { id: 3, icon: "#icon-game", text: "adult online games" },
+  {
+    id: 1,
+    icon: "#icon-strawberry",
+    value: "one-night stand",
+    text: "list.one_night_stand",
+  },
+  {
+    id: 2,
+    icon: "#icon-romantic",
+    value: "romantic relationship",
+    text: "list.romantic",
+  },
+  {
+    id: 3,
+    icon: "#icon-communication",
+    value: "new friends",
+    text: "list.new_friends",
+  },
+  {
+    id: 3,
+    icon: "#icon-family",
+    value: "starting a family",
+    text: "list.starting_a_family",
+  },
+  {
+    id: 3,
+    icon: "#icon-cam",
+    value: "adult Live Cams",
+    text: "list.adult_live_cams",
+  },
+  {
+    id: 3,
+    icon: "#icon-game",
+    value: "adult online games",
+    text: "list.adult_online_games",
+  },
 ];
 
 emit("updateData", { value: true, key: "active" });
@@ -70,7 +106,8 @@ const updateSelection = (val) => {
   selected.value = val;
 };
 
-const togglePopup = () => {
+const togglePopup = (e) => {
+  if (e.target.tagName !== "BUTTON") return;
   isPopup.value = !isPopup.value;
 };
 </script>

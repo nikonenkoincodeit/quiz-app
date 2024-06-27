@@ -1,7 +1,7 @@
 <template>
   <div
     class="card"
-    :class="[selected === text ? 'active' : '']"
+    :class="[selected === value ? 'active' : '']"
     @click="onClick"
   >
     <div class="card-icon">
@@ -17,6 +17,7 @@ import icon from "../assets/icons/sprite.svg";
 
 const props = defineProps({
   selected: { type: String },
+  value: { type: String },
   iconName: { type: String },
   text: { type: String },
 });
@@ -24,7 +25,7 @@ const props = defineProps({
 const emit = defineEmits(["updateSelection"]);
 
 const onClick = () => {
-  emit("updateSelection", props.text);
+  emit("updateSelection", props.value);
 };
 </script>
 

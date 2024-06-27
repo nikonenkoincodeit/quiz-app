@@ -1,16 +1,26 @@
 <template>
   <div class="box">
     <div class="info">
-      <h1 class="title">Partner</h1>
-      <p class="desc">
-        <button type="button" class="btn btn-accent">Сhoose</button>
-        the gender of the partner you prefer
-      </p>
+      <h1 class="title">{{ $t("partner.title") }}</h1>
+      <p
+        class="desc"
+        v-html="
+          $t('partner.desctiption1', {
+            btn: `<button
+          type=&quot;button&quot;
+          class=&quot;btn btn-accent&quot;
+        >
+          Сhoose</button
+        >`,
+          })
+        "
+      ></p>
       <div class="gallery">
         <Card
           v-for="item of items"
           :key="item.id"
-          :text="item.text"
+          :text="$t(item.text)"
+          :value="item.value"
           :iconName="item.icon"
           :selected="selectedGender"
           @updateSelection="updateSelection"
@@ -44,7 +54,7 @@ const disabled = ref(false);
 
 const props = defineProps({
   indexPage: { type: Number, default: 0 },
-  gender: { type: String },
+  gender: { type: String, default: "male" },
 });
 
 const emit = defineEmits(["nextPage", "updateData"]);
@@ -52,12 +62,13 @@ const emit = defineEmits(["nextPage", "updateData"]);
 emit("updateData", { value: true, key: "active" });
 
 const items = [
-  { id: 1, icon: "#icon-male", text: "male" },
-  { id: 2, icon: "#icon-female", text: "female" },
+  { id: 1, icon: "#icon-male", text: "list.male", value: "male" },
+  { id: 2, icon: "#icon-female", text: "list.female", value: "female" },
   {
     id: 3,
     icon: "#icon-venus-mars-solid",
-    text: "no matter",
+    text: "list.no_matter",
+    value: "no-matter",
   },
 ];
 
@@ -87,7 +98,7 @@ const img = computed(() => {
 
   return new URL(`../assets/img/${image}`, import.meta.url);
 });
-
+console.log(props.gender);
 if (props.gender === "female" || props.gender === "non-binary") {
   selectedGender.value = "male";
 } else if (props.gender === "male") {
@@ -104,7 +115,7 @@ const updateSelection = (val) => {
 };
 
 const el = computed(() =>
-  items.find((item) => item.text === selectedGender.value)
+  items.find((item) => item.value === selectedGender.value)
 );
 
 const updateData = () => {

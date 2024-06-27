@@ -1,3 +1,69 @@
 {
-    "hello": "Hello 12"
-  }
+    "progress_bar": {
+      "age":"Age",
+      "gender": "Gender",
+      "partner":"Partner",
+      "goal":"Goal"
+    },
+    "buttons": {
+      "continue": "Continue",
+      "got_it": "Got it",
+      "go_back": "Go Back"
+    },
+    "list":{
+      "male":"Male",
+      "female":"Female",
+      "non_binary": "Non-binary",
+      "no_matter": "no matter",
+      "one_night_stand":"One-night stand",
+      "romantic":"Romantic relationship",
+      "new_friends":"New friends",
+      "starting_a_family":"Starting a family",
+      "adult_live_cams":"Adult Live Cams",
+      "adult_online_games":"Adult online games"
+    },
+    "your_age": {
+      "title": "Your Age",
+      "desctiption1":"We use this to find better and more personal offers to you",
+      "desctiption2":"{btn} up or down to select the age",
+      "link": "I am already 18 but I don't want to show my age now"
+    },
+    "your_gender":{
+      "title": "Your Gender",
+      "desctiption1":"{btn} the option that best describes your gender"
+    },
+    "partner": {
+      "title": "Partner",
+      "desctiption1":"{btn} the gender of the partner you prefer"
+    },
+    "your_goal": {
+      "title": "Your Goal",
+      "desctiption1":"{btn} to learn more about each option"
+    },
+    "popup": {
+      "element1": {
+        "title":"One-night stand",
+        "text": "Choose this option if you are looking for quick dating, a relationship without commitment, in other words, a one-night stand"
+      },
+      "element2": {
+        "title":"Romantic relationship",
+        "text": "Choose this option if you are looking for a serious relationship, romance, regular dates and true love"
+      },
+      "element3": {
+        "title":"New friends",
+        "text": "Choose this option if you want to make new friends or just chat with someone"
+      },
+      "element4": {
+        "title":"Starting a family",
+        "text": "Choose this option if you want to get married and start a family"
+      },
+      "element5": {
+        "title":"Adult Live Cams",
+        "text": "Choose this option if you want to watch adult entertainment of web models in real time"
+      },
+      "element6": {
+        "title":"Adult browser games",
+        "text": "Choose this option if you want to play browser-based online games for adults"
+      }
+    }
+}
