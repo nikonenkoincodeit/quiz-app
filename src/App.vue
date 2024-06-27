@@ -15,12 +15,17 @@
   </section>
 </template>
 <script setup>
-import { reactive, ref, computed } from "vue";
+import { reactive, ref, computed, getCurrentInstance, onMounted } from "vue";
 import YourAge from "./components/YourAge.vue";
 import Partner from "./components/Partner.vue";
 import ProgressBar from "./components/ProgressBar.vue";
 import YourGender from "./components/YourGender.vue";
 import YourGoal from "./components/YourGoal.vue";
+
+onMounted(() => {
+  const { $i18n } = getCurrentInstance().proxy;
+  // $i18n.locale = "ru";
+});
 
 const items = reactive([
   {

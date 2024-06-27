@@ -1,6 +1,7 @@
 <template>
   <div class="box">
     <div class="info">
+      <p>{{ $t("hello") }}</p>
       <h1 class="title">Your Age</h1>
       <p class="desc">
         We use this to find better and more personal offers to you
