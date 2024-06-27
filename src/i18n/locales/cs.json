@@ -1,73 +1,73 @@
 {
     "progress_bar": {
-      "age":"",
-      "gender": "",
-      "partner":"",
-      "goal":""
+      "age":"Věk",
+      "gender": "Pohlaví",
+      "partner":"Partner",
+      "goal":"Cíl"
     },
     "buttons": {
-      "continue": "",
-      "got_it": "",
-      "go_back": ""
+      "continue": "Pokračovat",
+      "got_it": "Mám to",
+      "go_back": "Zpět"
     },
     "list":{
-      "male":"",
-      "female":"",
-      "non_binary": "",
-      "no_matter": "",
-      "one_night_stand":"",
-      "romantic":"",
-      "new_friends":"",
-      "starting_a_family":"y",
-      "adult_live_cams":"",
-      "adult_online_games":""
+      "male":"Muži",
+      "female":"Samice",
+      "non_binary": "Nebinární",
+      "no_matter": "Bez ohledu",
+      "one_night_stand":"Stánek na jednu noc",
+      "romantic":"Romantický",
+      "new_friends":"Noví přátelé",
+      "starting_a_family":"Rodina",
+      "adult_live_cams":"Živé kamery",
+      "adult_online_games":"Online hry"
     },
     "your_age": {
-      "title": "",
-      "desctiption1":"",
-      "desctiption2":"{btn} ",
-      "link": "",
-      "btn":""
+      "title": "Váš věk",
+      "desctiption1":"Používáme je k tomu, abychom pro vás našli lepší a osobnější nabídky.",
+      "desctiption2":"{btn} věku stačí přejít nahoru nebo dolů",
+      "link": "Je mi už 18 let, ale nechci teď dávat najevo svůj věk.",
+      "btn":"Pro výběr"
     },
     "your_gender":{
-      "title": "",
-      "desctiption1":"{btn} ",
-      "btn":""
+      "title": "Vaše pohlaví",
+      "desctiption1":"{btn} která nejlépe vystihuje vaše pohlaví",
+      "btn":"Vyberte možnost,"
     },
     "partner": {
-      "title": "",
-      "desctiption1":"{btn} ",
-      "btn":""
+      "title": "Partner",
+      "desctiption1":"{btn} si pohlaví partnera, kterému dáváte přednost.",
+      "btn":"Vyberte"
     },
     "your_goal": {
-      "title": "",
-      "desctiption1":"{btn} ",
-      "btn":""
+      "title": "Váš cíl",
+      "desctiption1":"{btn} sem se dozvíte více informací o jednotlivých možnostech",
+      "btn":"Kliknutím"
     },
     "popup": {
       "element1": {
-        "title":"",
-        "text": ""
+        "title":"Stánek na jednu noc",
+        "text": "Tuto možnost zvolte, pokud hledáte rychlé seznámení, vztah bez závazků, jinými slovy známost na jednu noc."
       },
       "element2": {
-        "title":"",
-        "text": ""
+        "title":"Romantický",
+        "text": "Tuto možnost zvolte, pokud hledáte vážný vztah, romantiku, pravidelné schůzky a opravdovou lásku."
       },
       "element3": {
-        "title":"",
-        "text": ""
+        "title":"Noví přátelé",
+        "text": "Tuto možnost zvolte, pokud chcete navázat nová přátelství nebo jen s někým chatovat."
       },
       "element4": {
-        "title":"",
-        "text": ""
+        "title":"Rodina",
+        "text": "Tuto možnost zvolte, pokud se chcete oženit a založit rodinu."
       },
       "element5": {
-        "title":"",
-        "text": ""
+        "title":"Živé kamery",
+        "text": "Tuto možnost vyberte, pokud chcete sledovat zábavu pro dospělé s webovými modelkami v reálném čase."
       },
       "element6": {
-        "title":"",
-        "text": ""
+        "title":"Online hry",
+        "text": "Tuto možnost vyberte, pokud chcete hrát online hry pro dospělé v prohlížeči."
       }
     }
   }

@@ -2,6 +2,11 @@
   <section class="my-section">
     <div class="container">
       <ProgressBar :items="items" :indexPage="indexPage" @nextPage="nextPage" />
+      <select v-model="selectedLanguage" @change="languageChanged">
+        <option v-for="lang in languages" :key="lang" :value="lang">
+          {{ lang }}
+        </option>
+      </select>
       <component
         :is="myComponent"
         :indexPage="indexPage"
@@ -22,9 +27,26 @@ import ProgressBar from "./components/ProgressBar.vue";
 import YourGender from "./components/YourGender.vue";
 import YourGoal from "./components/YourGoal.vue";
 
+const locale = ref(null);
+
+const selectedLanguage = ref("en");
+const languages = ref([
+  "en",
+  "ru",
+  "cs",
+  "de",
+  "es",
+  "fr",
+  "it",
+  "nl",
+  "pl",
+  "uk",
+]);
+
 onMounted(() => {
   const { $i18n } = getCurrentInstance().proxy;
-  $i18n.locale = "uk";
+  locale.value = $i18n;
+  // $i18n.locale = "uk";
 });
 
 const items = reactive([
@@ -88,8 +110,10 @@ const updateData = ({ key, value, text } = {}) => {
     items[indexPage.value][key]["name"] = value;
     items[indexPage.value][key]["text"] = text;
   } else items[indexPage.value][key] = value;
+};
 
-  console.log("items ", items);
+const languageChanged = (event) => {
+  locale.value.locale = selectedLanguage.value;
 };
 </script>
 
