@@ -1,73 +1,73 @@
 {
     "progress_bar": {
-      "age":"",
-      "gender": "",
-      "partner":"",
-      "goal":""
+      "age":"Leeftijd",
+      "gender": "Geslacht",
+      "partner":"Partner",
+      "goal":"Doel"
     },
     "buttons": {
-      "continue": "",
-      "got_it": "",
-      "go_back": ""
+      "continue": "Doorgaan",
+      "got_it": "Heb het",
+      "go_back": "Ga terug"
     },
     "list":{
-      "male":"",
-      "female":"",
-      "non_binary": "",
-      "no_matter": "",
-      "one_night_stand":"",
-      "romantic":"",
-      "new_friends":"",
-      "starting_a_family":"y",
-      "adult_live_cams":"",
-      "adult_online_games":""
+      "male":"Mannelijk",
+      "female":"Vrouw",
+      "non_binary": "Niet-binaire",
+      "no_matter": "Maakt niet uit",
+      "one_night_stand":"Stand voor één nacht",
+      "romantic":"Romantisch",
+      "new_friends":"Nieuwe vrienden",
+      "starting_a_family":"Familie",
+      "adult_live_cams":"Livecams",
+      "adult_online_games":"Online spelletjes"
     },
     "your_age": {
-      "title": "",
-      "desctiption1":"",
-      "desctiption2":"{btn} ",
-      "link": "",
-      "btn":""
+      "title": "Uw Leeftijd",
+      "desctiption1":"We gebruiken dit om betere en persoonlijkere aanbiedingen voor je te vinden.",
+      "desctiption2":"{btn} of omlaag om de leeftijd te selecteren",
+      "link": "Ik ben al 18 maar ik wil mijn leeftijd nu niet laten zien.",
+      "btn":"Scroll omhoog"
     },
     "your_gender":{
-      "title": "",
-      "desctiption1":"{btn} ",
-      "btn":""
+      "title": "Uw Geslacht",
+      "desctiption1":"{btn} die het beste je geslacht beschrijft.",
+      "btn":"Kies de optie"
     },
     "partner": {
-      "title": "",
-      "desctiption1":"{btn} ",
-      "btn":""
+      "title": "Partner",
+      "desctiption1":"{btn} geslacht van de partner van je voorkeur.",
+      "btn":"Kies het"
     },
     "your_goal": {
-      "title": "",
-      "desctiption1":"{btn} ",
-      "btn":""
+      "title": "Uw Doel",
+      "desctiption1":"{btn} voor meer informatie over elke optie",
+      "btn":"Klik hier"
     },
     "popup": {
       "element1": {
-        "title":"",
-        "text": ""
+        "title":"Stand voor één nacht",
+        "text": "Kies deze optie als je op zoek bent naar snel daten, een relatie zonder verplichtingen, met andere woorden, een one-night stand."
       },
       "element2": {
-        "title":"",
-        "text": ""
+        "title":"Romantisch",
+        "text": "Kies deze optie als je op zoek bent naar een serieuze relatie, romantiek, regelmatige afspraakjes en ware liefde."
       },
       "element3": {
-        "title":"",
-        "text": ""
+        "title":"Nieuwe vrienden",
+        "text": "Kies deze optie als je nieuwe vrienden wilt maken of gewoon met iemand wilt chatten."
       },
       "element4": {
-        "title":"",
-        "text": ""
+        "title":"Familie",
+        "text": "Kies deze optie als je wilt trouwen en een gezin wilt stichten."
       },
       "element5": {
-        "title":"",
-        "text": ""
+        "title":"Livecams",
+        "text": "Kies deze optie als je adult entertainment van webmodellen in realtime wilt bekijken."
       },
       "element6": {
-        "title":"",
-        "text": ""
+        "title":"Online spelletjes",
+        "text": "Kies deze optie als je browsergebaseerde online spellen voor volwassenen wilt spelen."
       }
     }
   }
