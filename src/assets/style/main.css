@@ -23,7 +23,6 @@ body {
 .title {
   font-size: var(--title-size);
   color: var(--main-color);
-  color: red;
   padding: 8px 0;
 }
 

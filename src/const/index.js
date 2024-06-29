@@ -1,12 +1,12 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyB5wbbm_QbCRv8v-iIAEiLcKoU1ugYQ6AU",
-  authDomain: "to-do-list35.firebaseapp.com",
+  apiKey: "AIzaSyDn61RYiSde-Inu_uycyaJvCdG7ZfMDs4U",
+  authDomain: "test2-d8dc7.firebaseapp.com",
   databaseURL:
-    "https://to-do-list35-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "to-do-list35",
-  storageBucket: "to-do-list35.appspot.com",
-  messagingSenderId: "177788544157",
-  appId: "1:177788544157:web:564d5302d4cb8f08d0e074",
+    "https://test2-d8dc7-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "test2-d8dc7",
+  storageBucket: "test2-d8dc7.appspot.com",
+  messagingSenderId: "373768097573",
+  appId: "1:373768097573:web:9abc5045295590d2cf94cc",
 };
 
 export const TABLE_NAME = "test";
