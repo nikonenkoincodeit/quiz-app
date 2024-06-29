@@ -2,11 +2,6 @@
   <section class="my-section">
     <div class="container">
       <ProgressBar :items="items" :indexPage="indexPage" @nextPage="nextPage" />
-      <select v-model="selectedLanguage" @change="languageChanged">
-        <option v-for="lang in languages" :key="lang" :value="lang">
-          {{ lang }}
-        </option>
-      </select>
       <component
         :is="myComponent"
         :indexPage="indexPage"
@@ -26,34 +21,23 @@ import Partner from "./components/Partner.vue";
 import ProgressBar from "./components/ProgressBar.vue";
 import YourGender from "./components/YourGender.vue";
 import YourGoal from "./components/YourGoal.vue";
+import { getBrowserLanguage, prepareDataForSending } from "./helper";
+import { addData } from "./api";
 
 const locale = ref(null);
 
-const selectedLanguage = ref("en");
-const languages = ref([
-  "en",
-  "ru",
-  "cs",
-  "de",
-  "es",
-  "fr",
-  "it",
-  "nl",
-  "pl",
-  "uk",
-]);
-
 onMounted(() => {
   const { $i18n } = getCurrentInstance().proxy;
-  locale.value = $i18n;
-  // $i18n.locale = "uk";
+  const lang = getBrowserLanguage();
+  locale.value = lang.split("-")[0];
+  $i18n.locale = lang.split("-")[0];
 });
 
 const items = reactive([
   {
     id: 1,
     value: "",
-    name: "your age",
+    name: "your_age",
     selected: "",
     text: "progress_bar.age",
     icon: { name: "", text: "" },
@@ -63,7 +47,7 @@ const items = reactive([
   {
     id: 2,
     value: "",
-    name: "your gender",
+    name: "your_gender",
     selected: "",
     text: "progress_bar.gender",
     icon: { name: "", text: "" },
@@ -83,7 +67,7 @@ const items = reactive([
   {
     id: 4,
     value: "",
-    name: "your goal",
+    name: "your_goal",
     selected: "",
     text: "progress_bar.goal",
     icon: { name: "", text: "" },
@@ -105,15 +89,24 @@ const nextPage = (val) => {
   indexPage.value = val;
 };
 
-const updateData = ({ key, value, text } = {}) => {
+const updateData = ({ key, value, text, page = "next" } = {}) => {
   if (key === "icon") {
     items[indexPage.value][key]["name"] = value;
     items[indexPage.value][key]["text"] = text;
   } else items[indexPage.value][key] = value;
-};
-
-const languageChanged = (event) => {
-  locale.value.locale = selectedLanguage.value;
+  setTimeout(() => {
+    if (page === "finish") {
+      const data = prepareDataForSending(items);
+      data.locale = locale.value;
+      addData(data)
+        .then((r) => {
+          console.log(r);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    }
+  }, 0);
 };
 </script>
 

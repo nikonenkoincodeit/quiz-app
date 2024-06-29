@@ -98,6 +98,7 @@ const onClick = () => {
     value: el.value.icon,
     key: "icon",
     text: el.value.value,
+    page: "finish",
   });
   emit("updateData", { value: el.value.value, key: "selected" });
 };
