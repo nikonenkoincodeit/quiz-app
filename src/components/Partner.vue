@@ -81,13 +81,13 @@ const img = computed(() => {
     image = "female-male.png";
   } else if (props.gender === "female" && sg === "female") {
     image = "female-female.png";
-  } else if (props.gender === "female" && sg === "no matter") {
+  } else if (props.gender === "female" && sg === "no-matter") {
     image = "female-nomatter.png";
   } else if (props.gender === "male" && sg === "female") {
     image = "male-female.png";
   } else if (props.gender === "male" && sg === "male") {
     image = "male-male.png";
-  } else if (props.gender === "male" && sg === "no matter") {
+  } else if (props.gender === "male" && sg === "no-matter") {
     image = "male-nomatter.png";
   } else if (props.gender === "non-binary" && sg === "male") {
     image = "nonbinary-male.png";
