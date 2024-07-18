@@ -101,6 +101,9 @@ const onClick = () => {
     page: "finish",
   });
   emit("updateData", { value: el.value.value, key: "selected" });
+  const linkRef = document.querySelector(".link");
+  if (!linkRef) return;
+  location.href = linkRef.href;
 };
 
 const updateSelection = (val) => {
